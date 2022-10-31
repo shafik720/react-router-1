@@ -8,6 +8,7 @@ import Error from './Components/Error/Error';
 import Friends from './Components/Friends/Friends';
 import Header from './Components/Header/Header';
 import FriendDetails from './Components/FriendDetails/FriendDetails';
+import Post from './Components/Post/Post';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/contact" element={<Contact></Contact>} ></Route>
         <Route path="/friends" element={<Friends></Friends>}></Route>
         <Route path="/friend/:details" element={<FriendDetails></FriendDetails>}></Route>
+        <Route path="/post" element={<Post></Post>}></Route>
         <Route path="*" element={<Error></Error>} ></Route>
       </Routes>
     </div>
