@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Post = () => {
     let [post, setPost] = useState([]);
@@ -10,6 +11,9 @@ const Post = () => {
     return (
         <div>
             <h2>Hello From Posts : {post.length} </h2>
+            {
+                post.map(index=><Link to={"/post/"+index.id}>{index.id}</Link>)
+            }
         </div>
     );
 };
