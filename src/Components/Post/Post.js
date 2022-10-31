@@ -5,11 +5,11 @@ const Post = () => {
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(data=>setPost(data))
     },[])
     return (
         <div>
-            <h2>Hello From Posts</h2>
+            <h2>Hello From Posts : {post.length} </h2>
         </div>
     );
 };
