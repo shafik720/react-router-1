@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const Post = () => {
     let [post, setPost] = useState([]);
@@ -14,6 +14,7 @@ const Post = () => {
             {
                 post.map(index=><Link to={"/post/"+index.id}>{index.id}</Link>)
             }
+            <Outlet></Outlet>
         </div>
     );
 };
